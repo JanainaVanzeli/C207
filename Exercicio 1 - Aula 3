@@ -1,0 +1,21 @@
+CREATE DATABASE exercicio1;
+
+CREATE Table if not exists usuario 
+(
+id int not null auto_increment primary key,
+nome VARCHAR(20),
+email VARCHAR(40),
+senha VARCHAR(5)
+);
+    
+    INSERT INTO usuario (nome, email, senha) VALUES ('Alexandre', 'alexandre@email.com', '12345');
+    INSERT INTO usuario (nome, email, senha) VALUES ('Natanael', 'natanael12@email.com', 'ABCDE');
+    INSERT INTO usuario (nome, email, senha) VALUES ('Julia', 'julia09@email.com', '98765');
+    INSERT INTO usuario (nome, email, senha) VALUES ('Fernanda', 'jfernanda@email.com', 'EFGHI');
+    
+    UPDATE usuario SET senha = '54321' WHERE id = '1';
+    
+    DELETE FROM usuario WHERE id = '4';
+    
+    SELECT * FROM usuario WHERE nome LIKE '%N%';
+    SELECT * FROM usuario;
